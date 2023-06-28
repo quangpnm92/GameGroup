@@ -7,6 +7,6 @@ public class getHighesScore : MonoBehaviour
     public Text highestScore;
     void Start()
     {
-        highestScore.text = PlayerPrefs.GetFloat("HighScore", 0).ToString("0.00");
+        highestScore.text = PlayerPrefs.GetFloat("Your Score", 0).ToString("0.00");
     }
 }
