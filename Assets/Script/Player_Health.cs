@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -16,12 +17,14 @@ public class Player_Health : MonoBehaviour
     [SerializeField] public Text healthText;
 
     [SerializeField] private AudioSource deathSound;
+
     private void Start()
     {
         maxhealth = health;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         healthText.text = "100%";
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,6 +45,7 @@ public class Player_Health : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Static;
         deathSound.Play();
         animator.SetTrigger("death");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 }
