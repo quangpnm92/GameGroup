@@ -331,8 +331,8 @@ MonoBehaviour:
   m_Text: "This game is set to no time limit\r\nThe character will be have fully
     100% blood at starting. If the saw hit them 1 time, minor 20% blood\r\n\t=> 5
     times hit = dead.\r\nUsing Keyboard to play:\r\n\tSpace: jump up\r\n\t4 Arrows:
-    to move 4 ways\r\nShow and Save best score ( longest time)\r\nReplay the game
-    (optional)."
+    to move 4 ways\r\nShow and Save current and highest score (longest time)\r\nReplay
+    the game (optional)."
 --- !u!222 &559721223
 CanvasRenderer:
   m_ObjectHideFlags: 0
