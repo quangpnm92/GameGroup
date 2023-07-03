@@ -5707,7 +5707,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.421
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6100,7 +6100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTimerText: {fileID: 711256494}
   highestTimerText: {fileID: 1093119390}
-  timer: 0
 --- !u!4 &1642605270
 Transform:
   m_ObjectHideFlags: 0

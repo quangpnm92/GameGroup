@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI currentTimerText;
     [SerializeField] TextMeshProUGUI highestTimerText;
 
-    public float timer;
+    public static float timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +34,16 @@ public class GameManager : MonoBehaviour
 
     void UpdateHighScore()
     {
-        highestTimerText.text = $"HighScore: {PlayerPrefs.GetFloat("HighScore",0).ToString("0.00")}";
+        highestTimerText.text = $"HighScore: {PlayerPrefs.GetFloat("HighScore", 0).ToString("0.00")}";
+    }
+
+    public static float getCurrentTimer()
+    {
+        return timer;
+    }
+
+    public static float getHighestTimer()
+    {
+        return PlayerPrefs.GetFloat("HighScore", 0);
     }
 }
