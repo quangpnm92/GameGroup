@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask jumpGround;
 
-    private float moveSpeed = 7f;
-    private float jump = 4f;
+    private float jump = 7f;
+    private float moveSpeed = 4f;
     private float dirX = 0f;
     private enum MovementState { idle, running, jumping, falling }
 
@@ -32,12 +32,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2 (dirX * jump, rb.velocity.y);
+        rb.velocity = new Vector2 (dirX * moveSpeed, rb.velocity.y);
 
         if (Input.GetButtonDown("Jump") && isLanded())
         {
             jumpSoundEffect.Play();
-            rb.velocity = new Vector2(rb.velocity.x, moveSpeed);
+            rb.velocity = new Vector2(rb.velocity.x, jump);
         }
 
 
